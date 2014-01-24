@@ -48,7 +48,7 @@
   // Create a new view named Todos.Index.Todo
   // use the todo template
   // catch "click button" events calling the delete method
-  // render shall set the rendered template to $el
+  // render should set the rendered template to $el
   // create a method named 'name' and let it return 'name' from the model
   // create a method named 'text' and let it return 'text' from the model
   // create a method named 'delete' and let it destroy the model
