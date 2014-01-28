@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Todos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/todos.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class='container'>
+      <div class='hero-unit'>
+        <h1>Todos</h1>
+        <p>git clone https://github.com/peterlindstrom/todos-backbone-handlebars-js.git</p>
+        <p><a href="todos-unsolved.html">View solved version</a></p>
+      </div>
+      <div class='row'>
+        <div class='span12' id='todos'>
+          Loading...
+        </div>
+      </div>
+    </div>
+
+    <script type="text/x-handlebars-template" id="index-template">
+      <h2>There are {{ count }} todos</h2>
+      <div class='todos'></div>
+    </script>
+    <script type="text/x-handlebars-template" id="todo-template">
+      <h3>{{ name }}</h3>
+      <p>{{ text }}</p>
+      <p>
+        <button class='btn btn-danger'>Delete</button>
+      </p>
+    </script>
+    <script type="text/x-handlebars-template" id="form-template">
+      <legend>Add a todo</legend>
+      <fieldset>
+        <div class='control-group'>
+          <label class='control-label' for='name'>Name</label>
+          <div class='controls'>
+            <input type='text' class='input-xlarge' id='name'>
+          </div>
+        </div>
+        <div class='control-group'>
+          <label class='control-label' for='text'>Text</label>
+          <div class='controls'>
+            <input type='text' class='input-xlarge' id='text'>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Add Todo</button>
+        </div>
+      </fieldset>
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.0/backbone.localStorage-min.js"></script>
+    <script src="js/todos-unresolved-step-1.js"></script>
+    <script>$(function() { Todos.init($('#todos')); });</script>
+  </body>
+</html>
+
