@@ -28,6 +28,7 @@
     <script type="text/x-handlebars-template" id="todo-template">
       <h3>{{ name }}</h3>
       <p>{{ text }}</p>
+      <p>{{ expired}}</p>
       <p>
         <button class='btn btn-danger'>Delete</button>
       </p>
@@ -45,6 +46,7 @@
           <label class='control-label' for='text'>Text</label>
           <div class='controls'>
             <input type='text' class='input-xlarge' id='text'>
+            <input type='date' class='input-xlarge' id='expirydate'>
           </div>
         </div>
         <div class="form-actions">
