@@ -48,8 +48,9 @@
     },
     render: function() {
       var tpl = this.template(this);
-      if (this.isExpired())
+      if (this.isExpired()) {
         this.$el.addClass("expired");
+      }
       this.$el.html(tpl);
       return this;
     },
